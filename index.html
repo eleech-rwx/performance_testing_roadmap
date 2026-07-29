@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Роадмап: Нагрузочное тестирование</title>
+<style>
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: #1a1a1f;
+    color: #e8e8ee;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  header {
+    padding: 14px 20px 6px;
+  }
+  header h1 {
+    font-size: 18px;
+    margin: 0 0 2px;
+    font-weight: 600;
+  }
+  header p {
+    margin: 0;
+    font-size: 12px;
+    color: #9a9aa5;
+  }
+  .markmap {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .markmap > svg {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Роадмап: Нагрузочное тестирование (НТ)</h1>
+  <p>Клик по кружку — свернуть/развернуть ветку · колесо мыши — зум · перетаскивание — панорама</p>
+</header>
+
+<div class="markmap">
+  <script type="text/template" id="mm-source"></script>
+</div>
+
+<script>
+  // ручной режим: не рендерить, пока не подгрузили содержимое roadmap.md
+  window.markmap = { autoLoader: { manual: true } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@latest"></script>
+<script>
+(async () => {
+  const res = await fetch('roadmap.md');
+  const md = await res.text();
+  document.getElementById('mm-source').textContent = md;
+  window.markmap.autoLoader.renderAll();
+})();
+</script>
+</body>
+</html>
