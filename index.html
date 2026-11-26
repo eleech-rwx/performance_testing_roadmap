@@ -62,6 +62,60 @@
   const md = await res.text();
   document.getElementById('mm-source').textContent = md;
   window.markmap.autoLoader.renderAll();
+  
+  // Add click handlers for markdown links after rendering
+  window.addEventListener('load', function() {
+    // Wait a bit for the markmap to render
+    setTimeout(function() {
+      const svgElements = document.querySelectorAll('.markmap .node text');
+      svgElements.forEach(element => {
+        // Check if the element has a link (we'll need to parse the markdown)
+        // For now, we'll add click handlers to all nodes and handle navigation logic
+        element.addEventListener('click', function(e) {
+          // Prevent default behavior
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Get the text content of clicked node
+          const text = this.textContent.trim();
+          
+          // Simple routing based on section names
+          switch(text) {
+            case 'Роадмап: Нагрузочное тестирование (НТ)':
+              window.location.href = 'placeholder-link-1';
+              break;
+            case '1. Основы НТ':
+              window.location.href = 'placeholder-link-1';
+              break;
+            case '2. Сети и API':
+              window.location.href = 'placeholder-link-2';
+              break;
+            case '3. Jmeter':
+              window.location.href = 'placeholder-link-3';
+              break;
+            case '4. GIT':
+              window.location.href = 'placeholder-link-4';
+              break;
+            case '5. Java':
+              window.location.href = 'placeholder-link-5';
+              break;
+            case '6. Среда, Инфраструктура':
+              window.location.href = 'placeholder-link-6';
+              break;
+            case '7. Базы данных':
+              window.location.href = 'placeholder-link-7';
+              break;
+            case '8. Мониторинг и логирование':
+              window.location.href = 'placeholder-link-8';
+              break;
+            default:
+              // If no match, do nothing or handle as needed
+              return;
+          }
+        });
+      });
+    }, 1000);
+  });
 })();
 </script>
 </body>
