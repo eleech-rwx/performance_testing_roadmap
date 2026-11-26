@@ -1,6 +1,6 @@
-# Роадмап: Нагрузочное тестирование (НТ)
+# [Роадмап: Нагрузочное тестирование (НТ)](placeholder-link-1)
 
-## 1. Основы НТ
+## [1. Основы НТ](placeholder-link-1)
 ### Теория НТ
 - Виды тестов
 - Определения, термины
@@ -11,7 +11,7 @@
 - Сбор профиля
 - Актуализация
 
-## 2. Сети и API
+## [2. Сети и API](placeholder-link-2)
 - Модель OSI, Стек TCP/IP
 - Регулярные выражения
 ### REST API (postman, insomnia)
@@ -23,12 +23,12 @@
   - аутентификация
   - документация
 
-## 3. Jmeter
+## [3. Jmeter](placeholder-link-3)
 - Введение в JMeter
 - GUI и CLI режимы
 - JSR223
 
-## 4. GIT
+## [4. GIT](placeholder-link-4)
 ### Базовые команды
 - git init
 - git clone
@@ -52,7 +52,7 @@
 - git reset
 - git revert
 
-## 5. Java
+## [5. Java](placeholder-link-5)
 - Основы Java/Java EE
 ### Основы Java
 - Переменные, типы данных
@@ -63,7 +63,7 @@
 - Non heap, stack
 - GC
 
-## 6. Среда, Инфраструктура
+## [6. Среда, Инфраструктура](placeholder-link-6)
 ### Docker, K8s
 - Docker
 - K8s
@@ -73,7 +73,7 @@
 - Kafka
 - RabbitMQ
 
-## 7. Базы данных
+## [7. Базы данных](placeholder-link-7)
 ### SQL
 - Операторы SELECT, INSERT, UPDATE, DELETE
 - Типы данных
@@ -82,7 +82,7 @@
 - MongoDB
 - Redis
 
-## 8. Мониторинг и логирование
+## [8. Мониторинг и логирование](placeholder-link-8)
 ### Системы мониторинга
 - Telegraf + Influxdb
 - Prometheus
